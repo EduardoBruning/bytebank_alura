@@ -1,5 +1,6 @@
 import 'package:bytebank/screens/contacts/contacts_list.dart';
 import 'package:bytebank/screens/transferencia/listaTransferencia.dart';
+import 'package:bytebank/screens/transferencia/transactions_list.dart';
 import 'package:flutter/material.dart';
 
 class Dashboard extends StatelessWidget {
@@ -33,7 +34,7 @@ class Dashboard extends StatelessWidget {
                   "Transaction Feed",
                   Icons.description,
                   onClick: () {
-                    _showTransactionList(context);
+                    _showTransactionsList(context);
                   },
                 ),
               ],
@@ -56,6 +57,14 @@ class Dashboard extends StatelessWidget {
     Navigator.of(context).push(
       MaterialPageRoute(
         builder: (context) => ListaTransferencia(),
+      ),
+    );
+  }
+
+  _showTransactionsList(BuildContext context) {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => TransactionsList(),
       ),
     );
   }

@@ -1,9 +1,12 @@
+import 'package:bytebank/http/webclient.dart';
 import 'package:bytebank/screens/dashboard/dashboard.dart';
 import 'package:bytebank/screens/transferencia/listaTransferencia.dart';
 import 'package:flutter/material.dart';
 
-void main() => runApp(ByteBankApp());
-
+void main() {
+  runApp(ByteBankApp());
+  findAll();
+}
 class ByteBankApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
